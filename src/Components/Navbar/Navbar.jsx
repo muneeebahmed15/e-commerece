@@ -38,7 +38,7 @@ const Navbar = () => {
             </li>
 
             <li>
-              <Link to='/products'
+              <Link to='/'
                 className="text-gray-500 transition hover:text-gray-500/75"
                 href="/"
               >
@@ -70,7 +70,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <div className="sm:flex sm:gap-4">
            
-            <Btn title={"Login"}/>
+           <Link to='/login'> <Btn title={"Login"}/></Link> 
 
             <div className="hidden sm:flex">
               <Link to='/signup'

@@ -1,20 +1,13 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import ProductBanner from '../Components/Ui/ProductBanner'
 import { GameData } from '../data/GameData'
 
-const Products = () => {
-const {name} = useParams()
+const Abc = () => {
 
-let oneProduct = GameData.find((x) => x.name === name)
-
+   
   return (
-    <>
-      <ProductBanner item={oneProduct}/>
-
-      <div className="container px-5 py-10  mx-auto relative">
+    <div className="container px-5 py-10  mx-auto">
         <div className="flex flex-wrap justify-center gap-5 -m-4">
-      {oneProduct.GameProducts.map((x)=>(
+      {GameData.map((x)=>(
         <a href="#" className="lg:w-1/5 md:w-1/2 p-4 w-full group relative block bg-black ">
         <img
           alt="Developer"
@@ -34,7 +27,7 @@ let oneProduct = GameData.find((x) => x.name === name)
               className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
             >
               <p className="text-sm text-white">
-               {/* {oneProduct.GameProducts.map((x)=>( <p>{x.name}</p>))}  */}
+               {x.GameProducts.map(x=> <p>{x.name}</p>)}
               </p>
             </div>
           </div>
@@ -43,9 +36,7 @@ let oneProduct = GameData.find((x) => x.name === name)
       ))}
       </div>
     </div>
-
-    </>
   )
 }
 
-export default Products
+export default Abc

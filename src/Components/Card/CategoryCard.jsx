@@ -7,7 +7,7 @@ const CategoryCard = ({x}) => {
       <a href="#" className="group relative block bg-black">
   <img
     alt="Developer"
-    src={x.bgimage} className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+    src={x.bgImage} className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
   />
 
   <div className="relative p-4 sm:p-6 lg:p-8">

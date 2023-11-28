@@ -1,11 +1,11 @@
 import React from 'react'
-import { categoriesdata } from '../../data/Categories'
 import CategoryCard from './CategoryCard'
+import { GameData } from '../../data/GameData'
 
 const ProductCard = () => {
   return (
     <>
-      {categoriesdata.map((x, index)=>(
+      {GameData.map((x, index)=>(
         <div key={index}>
         <CategoryCard x={x}/>
         </div>
